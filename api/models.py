@@ -1,3 +1,4 @@
+from statistics import mode
 from django.db import models
 
 # Create your models here.
@@ -11,3 +12,9 @@ class Retailer(models.Model):
     phnumber=models.IntegerField(max_length=10)
     list_items=models.TextField()
     
+class GovernmentScheme(models.Model):
+    schemename=models.CharField(max_length=100)
+    description= models.TextField()
+    datereleased=models.DateField()
+    helplineno=models.IntegerField(max_length=10)
+      

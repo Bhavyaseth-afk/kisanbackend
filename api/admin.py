@@ -5,3 +5,4 @@ class KisanAdmin(admin.ModelAdmin):
     list_display = ['id' , 'name' , 'number']
 
 admin.site.register(Retailer)
+admin.site.register(GovernmentScheme)

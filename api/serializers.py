@@ -1,3 +1,5 @@
+from pyexpat import model
+from attr import field, fields
 from rest_framework import serializers
 from .models  import *
 
@@ -12,3 +14,9 @@ class RetailerSerializer(serializers.ModelSerializer):
         model=Retailer
         fields=['retname', 'address','phnumber','list_items']
     
+class GovernmentSchemeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=GovernmentScheme
+        fields='__all__'
+        
+        
