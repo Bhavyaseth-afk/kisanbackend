@@ -1,10 +1,10 @@
 from rest_framework.response import Response
-from .models import GovernmentScheme, Kisan, Retailer
-from .serializers import GovernmentSchemeSerializer, KisanSerializer, RetailerSerializer
-from rest_framework.generics import ListAPIView 
+from .models import Crops, FarmingTech, GovernmentScheme, Kisan, Retailer
+from .serializers import CropSerializer, FarmingTechSerializer, GovernmentSchemeSerializer, KisanSerializer, RetailerSerializer
 from rest_framework.views import APIView
-from django.http import Http404
 from rest_framework import status
+
+
 
 
 class KisanList(APIView):
@@ -46,4 +46,15 @@ class GoverSchemeList(APIView):
         schemes = GovernmentScheme.objects.all()
         serializer=GovernmentSchemeSerializer(schemes, many=True)
         return Response(serializer.data)
-    
+
+class CropList(APIView):
+    def get(self,request,format=None):
+        cropname=Crops.objects.all()
+        serializer=CropSerializer(cropname,many=True)
+        return Response(serializer.data)
+
+class FarmTechList(APIView):
+    def get(self,request, format=None):
+        techname=FarmingTech.objects.all()
+        serializer= FarmingTechSerializer(techname,many=True)
+        return Response(serializer.data)

@@ -6,3 +6,5 @@ class KisanAdmin(admin.ModelAdmin):
 
 admin.site.register(Retailer)
 admin.site.register(GovernmentScheme)
+admin.site.register(Crops)
+admin.site.register(FarmingTech)

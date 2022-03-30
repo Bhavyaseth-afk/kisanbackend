@@ -19,4 +19,12 @@ class GovernmentSchemeSerializer(serializers.ModelSerializer):
         model=GovernmentScheme
         fields='__all__'
         
+class CropSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Crops
+        fields='__all__'
         
+class FarmingTechSerializer(serializers.ModelSerializer):
+    class Meta:
+        model= FarmingTech
+        fields='__all__'

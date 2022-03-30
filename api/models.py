@@ -17,4 +17,15 @@ class GovernmentScheme(models.Model):
     description= models.TextField()
     datereleased=models.DateField()
     helplineno=models.IntegerField(max_length=10)
-      
+
+class Crops(models.Model):
+    cropname=models.CharField(max_length=20)
+    description=models.TextField()
+    season = models.CharField(max_length=40)
+    price = models.IntegerField(max_length=10)
+    
+
+class FarmingTech(models.Model):
+    techname=models.CharField(max_length=40)
+    techdes = models.TextField()
+    
