@@ -23,9 +23,11 @@ class Crops(models.Model):
     description=models.TextField()
     season = models.CharField(max_length=40)
     price = models.IntegerField(max_length=10)
+    cropimg = models.TextField(default='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.croptrust.org%2Fabout-us%2F&psig=AOvVaw1FZqITIQTLx14SxhLQIRDS&ust=1649005670360000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIjl1Pvu9fYCFQAAAAAdAAAAABAD')
     
 
 class FarmingTech(models.Model):
     techname=models.CharField(max_length=40)
     techdes = models.TextField()
+    techimg= models.TextField(default="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.alimentarium.org%2Fen%2Ffact-sheet%2Farable-farming-techniques&psig=AOvVaw38P2DborETGsZ23i8otB8i&ust=1649005701555000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKC0hYzv9fYCFQAAAAAdAAAAABAD")
     
