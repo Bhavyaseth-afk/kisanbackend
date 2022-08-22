@@ -16,13 +16,13 @@ class GovernmentScheme(models.Model):
     schemename=models.CharField(max_length=100)
     description= models.TextField()
     datereleased=models.DateField()
-    helplineno=models.IntegerField(max_length=10)
+    helplineno=models.IntegerField()
 
 class Crops(models.Model):
     cropname=models.CharField(max_length=20)
     description=models.TextField()
     season = models.CharField(max_length=40)
-    price = models.IntegerField(max_length=10)
+    price = models.IntegerField()
     cropimg = models.TextField(default='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.croptrust.org%2Fabout-us%2F&psig=AOvVaw1FZqITIQTLx14SxhLQIRDS&ust=1649005670360000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIjl1Pvu9fYCFQAAAAAdAAAAABAD')
     
 
